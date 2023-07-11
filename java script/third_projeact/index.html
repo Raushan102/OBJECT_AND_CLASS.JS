@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project go make is calculates</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="shapeMobile">
+
+      <div id="result"></div>
+      <input type="text" name="input" id="result1">
+
+
+      <table>
+
+        <tr>
+          <th id="AC" class="color" onclick="clearInputField()">clear</th>
+          <th id="plus_Slac_minus" class="color" onclick="removeValue()">+/-</th>
+          <th id="modulo" class="color" onclick="insertValue('%')">%</th>
+          <th id="div" class="bgcYellow" onclick="insertValue('/')">div</th>
+        </tr>
+        <tr>
+          <td id="seven" onclick="insertValue('7')">7</td>
+          <td id="eight" onclick=" insertValue('8')">8</td>
+          <td id="nine" onclick=" insertValue('9')">9</td>
+          <th id="multiply" class="bgcYellow" onclick=" insertValue('*')">*</th>
+        </tr>
+        <tr>
+          <td id="four" onclick=" insertValue('4')">4</td>
+          <td id="five" onclick=" insertValue('5')">5</td>
+          <td id="six" onclick=" insertValue('6')">6</td>
+          <th id="subtract" class="bgcYellow" onclick=" insertValue('-')">-</th>
+        </tr>
+        <tr>
+
+          <td id="one" onclick=" insertValue('1')">1</td>
+          <td id="two" onclick=" insertValue('2')">2</td>
+          <td id="three" onclick=" insertValue('3')">3</td>
+          <th id="plus" class="bgcYellow" onclick=" insertValue('+')">+</th>
+        </tr>
+        <tr>
+
+          <td id="zero" colspan="2" onclick=" insertValue('0')">0</td>
+          <td id="dot" onclick=" insertValue('.')">.</td>
+          <th id="eqalTo" class="bgcYellow" onclick="calculateResult()">=</th>
+        </tr>
+
+      </table>
+
+
+
+
+
+
+    </div>
+    </div>
+  </main>
+   <script src="./script.js"></script>
+  
+ 
+</body>
+
+</html>

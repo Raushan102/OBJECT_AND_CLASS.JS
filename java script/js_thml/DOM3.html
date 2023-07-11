@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM3</title>
+  </head>
+  <body>
+    <h2>see how to add event</h2>
+    <span class="span1"></span><!--how to set event -->
+    <!--<button onclick="function2()" id="button1">hello</button>--><!--on click event-->
+    <!--<button ondblclick="function2()" id="button1">hello</button>/// on double click event-->
+    <button onmouseenter="function2()" id="button1">hello</button><!--how to set event on element-->
+    <!--there a lot of events that we want to uppaly-->
+
+    <script>
+      document.addEventListener("click", first1);//target the particular element  for event 
+
+      function first1() {
+        document.getElementsByClassName("span1")[0].innerText =
+          "hello ia am raushan kumar!";
+      }
+
+      function function2() {
+        document.getElementById("button1").innerText = "hello";
+        document.getElementById("button1").style.fontSize = "large";
+        document.getElementById("button1").style.height = "50px";
+        document.getElementById("button1").style.width = "50px";
+        document.getElementById("button1").style.border = "2px solid";
+        document.getElementById("button1").style.color = "aqua";
+      }
+    </script>
+  </body>
+</html>

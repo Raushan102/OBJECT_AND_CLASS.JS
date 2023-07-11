@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>colorMixer</title>
+    <!--++++++++++++++++++++++++++++++css++++++++++++++++++++++++++++++++++++++++-->
+
+    <style>
+    
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: #000000;
+        font-family: "Poppins", sans-serif;
+      }
+
+      div {
+        border: 5px ridge rgb(0, 229, 255);
+        border-radius: 10px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+
+        align-content: center;
+        justify-content: center;
+        background-color: #00ffff;
+        gap: 10px;
+        box-shadow:  4px 4px 4px 0.5em rgba(0, 0, 0, 0);
+      }
+      select {
+        border-radius: 10px;
+        padding: 20px;
+        font-size: large;
+        font-family: "Poppins", sans-serif;
+        border: none;
+      }
+      level {
+        font-size: larger;
+      }
+      button {
+        border-radius: 10px;
+        padding: 20px;
+        font-size: large;
+        font-family: "Poppins", sans-serif;
+        border: none;
+      }
+      option {
+        font-family: "Poppins", sans-serif;
+      }
+    </style> 
+
+
+<!--+++++++++++++++++++++++++++++html ++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+  </head>
+  <body>
+    <div>
+      <level>select the first color:</level><!--only for user information-->
+      <select id="colorFirst" name="colorFirst"><!--create option for color select of first color  -->
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+      </select>
+
+      <level>select the second color:</level><!--only for user information-->
+
+      <select id="colorSecond" name="colorSecond"><!--create option for color select of second color  -->
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+      </select>
+      <button id="submit">submit</button><!-- button for submit -->
+      <button id="result"></button><!--for result-->
+    </div>
+ <!--+++++++++++++++++++++++++++++javascript++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <script>
+      let submitButton = document.getElementById("submit");// target submit button fro submit  
+
+      submitButton.addEventListener("click", calculatecolor);// add event listener for or calling the function
+
+      function calculatecolor() {
+        let result = document.getElementById("result");
+        let colorFirst = document.getElementById("colorFirst");
+        let colorSecond = document.getElementById("colorSecond");
+
+        let firstColor = colorFirst.value;// fetch first color 
+        let secondColor = colorSecond.value;//fetched second color
+
+
+        switch ((firstColor, secondColor)) {// function for the mix color
+          case ("red", "blue"):
+            result.innerText = "purple";
+            break;
+          case ("red", "yellow"):
+            result.innerText = "orange";
+            break;
+          case ("blue", "yellow"):
+            result.innerText = "green";
+
+          default:
+            result.innerText(invalid);
+        }
+      }
+    </script>
+  </body>
+</html>

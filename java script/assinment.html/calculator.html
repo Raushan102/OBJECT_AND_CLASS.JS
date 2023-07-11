@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculates</title>
+  </head>
+  <!--++++++++++++++++++++++++++++++++css+++++++++++++++++++++++++++++++++++++++++++++-->
+  <style>
+    body {
+      height: 100vh;
+      width: 100vw;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      background-color: rgb(34, 0, 255);
+    }
+    input,
+    button {
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: large;
+      background-color: lightslategray;
+      
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      background-color: antiquewhite;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 50px;
+      gap: 10px;
+      border: 5px ridge black;
+      padding: 50px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      border-left: 10px dotted rgba(0, 0, 0, 0.445);
+      border-right: 10px dotted rgba(0, 0, 0, 0.455);
+    }
+  </style>
+  <!--++++++++++++++++++++++++++++++++++++++++html++++++++++++++++++++++++++++++++++++++++-->
+
+  <body>
+    <div>
+      <level>enter first number:</level>
+      <input type="number" id="one" placeholder="enter a" /><!--creating input field to take input fronm user-->
+      <br />
+      <label>enter second number:</label>
+      <input type="number" id="two" placeholder="enter b" />
+
+      <button id="button">=</button><!-- button for submit and request for the calculation-->
+      <button id="result"></button>
+    </div>
+  </body>
+
+  <!--+++++++++++++++++++++++++++++++++++javascript++++++++++++++++++++++++++++++++++++++++-->
+
+  <script>
+    let button = document.getElementById("button");
+    button.addEventListener("click", calculate);
+
+    function calculate() {
+      let operator1 = document.getElementById("one");//  target first input field
+
+      let operator2 = document.getElementById("two");//  target second input field
+      let result = document.getElementById("result");// for result
+
+      let a =parseInt (operator1.value);//assigning value of first input field in a
+      let b =parseInt (operator2.value);//assigning value of second input field in b
+
+      let operator = prompt("enter your operator / ,* ,- ,+ ,- ,");// prompt for input takeing operator from user 
+      switch (operator) { // switch case
+        case "*":
+          result.innerText = a * b;     
+
+          break;
+
+        case "+":
+          result.innerText = a+b;
+          break;
+
+        case "-":
+          result.innerText = a - b;
+          break;
+
+        case "/":
+          result.innerText = a / b;
+          break;
+
+        case "%":
+          result.innerText = a % b;
+          break;
+
+        default:
+          alert("Invalid operation");
+      }
+    }
+  </script>
+</html>

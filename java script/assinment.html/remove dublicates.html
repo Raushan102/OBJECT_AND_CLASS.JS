@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Interaction Example</title>
+  </head>
+  <body>
+    <p>Enter any number or string, and click "Submit" to add to the list:</p>
+
+    <input type="text" id="input" />
+    <button onclick="addToList()">Submit</button>
+    <button id="bag" onclick="bagf()">go to our bag</button>
+
+    <p>Here are the inputs you entered:</p>
+
+    <ul id="list"></ul>
+
+    <script>
+      let input = document.getElementById("input");
+      let items = [];
+
+      function addToList() {
+        items.push(input.value);
+
+        input.value = "";
+        return items;
+      }
+      function bagf() {
+        let finalitem = new Set(items);
+
+		console.log(finalitem);
+
+		   for (const element of finalitem) {
+
+
+        console.log("items=",element)
+        
+       }
+
+
+
+        
+		
+      }
+    </script>
+  </body>
+</html>

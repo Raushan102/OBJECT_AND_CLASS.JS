@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body>
+
+    <ol>
+        <li>hello</li>
+        <li>hii</li>
+        <li>ok</li>
+    </ol>
+    <script>
+        //how to create an element by the help of javascript
+
+        let h2=document.createElement("h2");//for create the  a h2 tag
+        h2.class="className";// for add the class
+        h2.style.fontSize="45px";// for set the css means style
+        h2.textContent="hello world";// to enter the content under the h2 tag 
+
+        document.body.appendChild(h2);// to tell the javascript  to insert the h2 tag in a web page
+        console.log(h2);// to print the element
+
+        //from here we write how to remove the element 
+
+       let olElement= document.querySelector("ol"); // to target th ol element 
+       
+       console.log(olElement);
+
+       let AllLi= document.querySelectorAll("li");// to target all li elements
+       console.log(AllLi);
+
+      /* for(let i=0;i<AllLi.length;i++)// loop for target all li elements
+       {
+         olElement.remove(i);// for remove the element 
+       }*/
+
+       //another way to iatrate over loop 
+
+       for(list of AllLi)// loop for target all li elements
+
+
+       {
+        olElement.removeChild(list);// for remove the element 
+       }
+
+        
+        
+
+    </script>
+    
+</body>
+</html>

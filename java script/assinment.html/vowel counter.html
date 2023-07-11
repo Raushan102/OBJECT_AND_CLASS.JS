@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vowel counter</title>
+  </head>
+  <body>
+    <form method="post">
+      <input
+        type="text"
+        name="username"
+        placeholder="enter your name"
+        id="userName"
+      />
+    </form>
+    <button id="submitButton">submit</button>
+
+    <script>
+      let buttonButton = document.getElementById("submitButton"); //target button by id
+
+      buttonButton.addEventListener("click", calculate);
+
+      function calculate() {
+        let username = document.getElementById("userName").value;
+
+        let vowel = "aeiou";
+        let count = 0;
+
+        let userNameArray = [...username];
+        let vowelArray = [...vowel];
+
+        userNameArray.forEach((el) => {
+          vowelArray.forEach((ele) => {
+            if (el === ele) {
+              count++;
+            }
+          });
+        });
+
+        console.log(
+          "total  number of vowel in " + "(" + username + ")" + "is =" + count
+        );
+      }
+    </script>
+  </body>
+</html>

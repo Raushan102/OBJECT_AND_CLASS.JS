@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>capitalization</title>
+  </head>
+  <body>
+    <form method="post">
+      <input
+        type="text"
+        name="username"
+        placeholder="enter your name"
+        id="userName"
+      />
+    </form>
+    <button id="submitButton">submit</button>
+
+    <script>
+      let buttonButton = document.getElementById("submitButton"); //target button by id
+
+      buttonButton.addEventListener("click", calculate);
+
+      function calculate() {
+        let username = document.getElementById("userName").value;//assigning value of input in username variable
+
+        if (username[0] === username[0].toUpperCase()) {// checking  first letter of username is capital  or not
+          console.log(username);
+        } else {
+          console.log(username.charAt(0).toUpperCase() + username.slice(1));
+        }
+      }
+    </script>
+  </body>
+</html>

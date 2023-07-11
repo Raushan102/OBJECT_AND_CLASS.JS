@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <!--target by the tag name-->
+    <p><span>hello world</span></p>
+
+    <!--target by class -->
+
+    <h2 class="classs1">America</h2>
+    <h2 class="classs1">china</h2>
+    <h2 class="classs1">korean</h2>
+
+    <!--target by the id-->
+
+    <span id="firstId">neeraj</span>
+
+    <!--query selection-->
+    <h3>free up</h3>
+    <h3 class="quertClass">this_IS_query_Class</h3>
+    <h3 id="quertID">this_IS_query_TD</h3>
+ 
+    <script>
+      //target element by tag name
+      let a = document.getElementsByTagName("p");
+      console.log(a[0].innerText);
+
+      a[0].innerText = "raushan kumar saw ";
+
+      console.log(a[0].innerText);
+
+      //target element by class name
+
+      let b = document.getElementsByClassName("classs1");
+      console.log(b[1].innerText);
+      b[2].innerText = "raja ram mohan ray ray was a great social reformer";
+
+      //target element by id
+      let c = document.getElementById("firstId");
+
+      console.log(c.innerText);
+      c.style.color="purple";
+      c.style.fontSize="xx-large";
+
+      //query selector
+
+      let d=document.querySelector("#quertID");
+      console.log(d.innerText);
+
+      let e=document.querySelector(".quertClass");
+      console.log(e.innerText);
+
+      let f=document.querySelector("h3")
+      console.log(f.innerText);
+
+
+
+    </script>
+  </body>
+</html>
